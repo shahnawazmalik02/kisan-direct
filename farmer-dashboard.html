@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KrishiDirect | Farmer Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-wheat-awn"></i>
+            </div>
+
+            <div>
+                <h2>Krishi<span>Direct</span></h2>
+                <small>Smart Agriculture</small>
+            </div>
+        </div>
+
+
+        <nav class="navigation">
+
+            <p class="nav-title">MAIN MENU</p>
+
+            <a href="#" class="nav-item active">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#produce" class="nav-item">
+                <i class="fa-solid fa-seedling"></i>
+                <span>My Produce</span>
+            </a>
+
+            <a href="#buyers" class="nav-item">
+                <i class="fa-solid fa-handshake"></i>
+                <span>Find Buyers</span>
+            </a>
+
+            <a href="#prices" class="nav-item">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Market Prices</span>
+            </a>
+
+            <a href="#logistics" class="nav-item">
+                <i class="fa-solid fa-truck"></i>
+                <span>Logistics</span>
+            </a>
+
+
+            <p class="nav-title">ACCOUNT</p>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-wallet"></i>
+                <span>Transactions</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-regular fa-bell"></i>
+                <span>Notifications</span>
+                <b class="notification-dot">3</b>
+            </a>
+
+            <a href="#" class="nav-item">
+                <i class="fa-solid fa-circle-question"></i>
+                <span>Help & Support</span>
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar Bottom -->
+
+        <div class="sidebar-bottom">
+
+            <div class="support-card">
+
+                <div class="support-icon">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+
+                <div>
+                    <strong>Need Help?</strong>
+                    <p>Talk to our support team</p>
+                </div>
+
+            </div>
+
+
+            <a href="auth.html" class="logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="mobile-menu" onclick="toggleSidebar()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search produce, buyers, prices...">
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <button class="icon-btn">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="alert-count">3</span>
+                </button>
+
+
+                <div class="profile">
+
+                    <div class="profile-photo">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div class="profile-info">
+                        <strong>Ramesh Kumar</strong>
+                        <span>Farmer • West Bengal</span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <section class="dashboard">
+
+            <!-- Greeting -->
+
+            <div class="welcome">
+
+                <div>
+
+                    <p class="date">
+                        <i class="fa-regular fa-calendar"></i>
+                        Friday, 28 August 2026
+                    </p>
+
+                    <h1>
+                        Good Morning, Ramesh! 👋
+                    </h1>
+
+                    <p>
+                        Here's what's happening with your farm today.
+                    </p>
+
+                </div>
+
+
+                <button class="add-produce"
+                    onclick="openProduceModal()">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add Produce
+
+                </button>
+
+            </div>
+
+
+            <!-- ================= STAT CARDS ================= -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon green">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                        </div>
+
+                        <span class="growth positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            8.4%
+                        </span>
+
+                    </div>
+
+                    <p>Estimated Crop Value</p>
+
+                    <h2>₹1,84,500</h2>
+
+                    <small>
+                        Compared to last week
+                    </small>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon blue">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <span class="growth positive">
+                            +6
+                        </span>
+
+                    </div>
+
+                    <p>Potential Buyers</p>
+
+                    <h2>24</h2>
+
+                    <small>
+                        Matching your produce
+                    </small>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon orange">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <span class="growth positive">
+                            +12.6%
+                        </span>
+
+                    </div>
+
+                    <p>Average Market Price</p>
+
+                    <h2>₹2,840</h2>
+
+                    <small>
+                        Per quintal today
+                    </small>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+
+                        <div class="stat-icon purple">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+
+                        <span class="growth">
+                            2 Active
+                        </span>
+
+                    </div>
+
+                    <p>Active Deliveries</p>
+
+                    <h2>02</h2>
+
+                    <small>
+                        On the way to buyers
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= MAIN GRID ================= -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- MARKET PRICE -->
+
+                <div class="card market-card" id="prices">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h2>Market Price Intelligence</h2>
+                            <p>Current prices near your location</p>
+                        </div>
+
+                        <select id="cropSelect"
+                            onchange="changeCrop()">
+
+                            <option value="tomato">
+                                Tomato
+                            </option>
+
+                            <option value="potato">
+                                Potato
+                            </option>
+
+                            <option value="rice">
+                                Rice
+                            </option>
+
+                            <option value="onion">
+                                Onion
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="price-main">
+
+                        <div>
+
+                            <span class="label">
+                                Current Market Price
+                            </span>
+
+                            <div class="price">
+                                ₹2,840
+                                <span>/ quintal</span>
+                            </div>
+
+                            <div class="price-change">
+                                <i class="fa-solid fa-arrow-up"></i>
+                                ₹320 (12.6%) from yesterday
+                            </div>
+
+                        </div>
+
+
+                        <div class="price-badge">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            Good Time to Sell
+                        </div>
+
+                    </div>
+
+
+                    <!-- Chart -->
+
+                    <div class="chart">
+
+                        <div class="chart-grid">
+                            <span>3000</span>
+                            <span>2800</span>
+                            <span>2600</span>
+                            <span>2400</span>
+                            <span>2200</span>
+                        </div>
+
+                        <svg
+                            viewBox="0 0 700 230"
+                            preserveAspectRatio="none">
+
+                            <defs>
+
+                                <linearGradient
+                                    id="areaGradient"
+                                    x1="0"
+                                    x2="0"
+                                    y1="0"
+                                    y2="1">
+
+                                    <stop
+                                        offset="0%"
+                                        stop-opacity=".25" />
+
+                                    <stop
+                                        offset="100%"
+                                        stop-opacity="0" />
+
+                                </linearGradient>
+
+                            </defs>
+
+                            <path
+                                class="area"
+                                d="M0,180
+                                   C70,170 80,150 130,160
+                                   S200,125 250,140
+                                   S310,110 360,120
+                                   S420,80 470,100
+                                   S530,65 580,78
+                                   S650,40 700,55
+                                   L700,230 L0,230 Z">
+                            </path>
+
+                            <path
+                                class="line"
+                                d="M0,180
+                                   C70,170 80,150 130,160
+                                   S200,125 250,140
+                                   S310,110 360,120
+                                   S420,80 470,100
+                                   S530,65 580,78
+                                   S650,40 700,55">
+                            </path>
+
+                        </svg>
+
+                    </div>
+
+
+                    <div class="chart-days">
+
+                        <span>Mon</span>
+                        <span>Tue</span>
+                        <span>Wed</span>
+                        <span>Thu</span>
+                        <span>Fri</span>
+                        <span>Sat</span>
+                        <span>Sun</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AI RECOMMENDATION -->
+
+                <div class="card ai-card">
+
+                    <div class="ai-heading">
+
+                        <div class="ai-icon">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+
+                        <div>
+                            <h2>AI Selling Advisor</h2>
+                            <p>Personalized recommendation</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="recommendation">
+
+                        <span class="recommend-label">
+                            RECOMMENDED ACTION
+                        </span>
+
+                        <h3>
+                            Sell within the next 2–3 days
+                        </h3>
+
+                        <p>
+                            Tomato prices are showing an upward
+                            trend. Demand from nearby buyers is
+                            currently high.
+                        </p>
+
+                    </div>
+
+
+                    <div class="ai-stats">
+
+                        <div>
+                            <span>Expected Price</span>
+                            <strong>₹3,050/Q</strong>
+                        </div>
+
+                        <div>
+                            <span>Confidence</span>
+                            <strong>87%</strong>
+                        </div>
+
+                    </div>
+
+
+                    <button class="advisor-btn">
+                        View Detailed Analysis
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- ================= PRODUCE + BUYERS ================= -->
+
+            <div class="bottom-grid">
+
+
+                <!-- MY PRODUCE -->
+
+                <div class="card produce-card" id="produce">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h2>My Produce</h2>
+                            <p>Your listed agricultural products</p>
+                        </div>
+
+                        <a href="#">View All</a>
+
+                    </div>
+
+
+                    <div class="produce-list">
+
+                        <div class="produce-item">
+
+                            <div class="crop-image tomato">
+                                🍅
+                            </div>
+
+                            <div class="crop-info">
+
+                                <strong>Fresh Tomato</strong>
+
+                                <span>
+                                    65 Quintals • Ready to sell
+                                </span>
+
+                            </div>
+
+                            <div class="crop-price">
+
+                                <strong>₹2,840</strong>
+
+                                <span>per quintal</span>
+
+                            </div>
+
+                            <button class="more-btn">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+
+                        </div>
+
+
+                        <div class="produce-item">
+
+                            <div class="crop-image potato">
+                                🥔
+                            </div>
+
+                            <div class="crop-info">
+
+                                <strong>Potato</strong>
+
+                                <span>
+                                    42 Quintals • Ready to sell
+                                </span>
+
+                            </div>
+
+                            <div class="crop-price">
+
+                                <strong>₹2,150</strong>
+
+                                <span>per quintal</span>
+
+                            </div>
+
+                            <button class="more-btn">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+
+                        </div>
+
+
+                        <div class="produce-item">
+
+                            <div class="crop-image rice">
+                                🌾
+                            </div>
+
+                            <div class="crop-info">
+
+                                <strong>Premium Rice</strong>
+
+                                <span>
+                                    28 Quintals • Listed
+                                </span>
+
+                            </div>
+
+                            <div class="crop-price">
+
+                                <strong>₹3,420</strong>
+
+                                <span>per quintal</span>
+
+                            </div>
+
+                            <button class="more-btn">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BUYERS -->
+
+                <div class="card buyers-card" id="buyers">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h2>Top Buyer Matches</h2>
+                            <p>Based on your produce</p>
+                        </div>
+
+                        <a href="#">View All</a>
+
+                    </div>
+
+
+                    <div class="buyer-list">
+
+
+                        <div class="buyer">
+
+                            <div class="buyer-logo">
+                                A
+                            </div>
+
+                            <div class="buyer-info">
+
+                                <strong>
+                                    AgriFresh Foods
+                                </strong>
+
+                                <span>
+                                    Kolkata • 18 km away
+                                </span>
+
+                            </div>
+
+                            <div class="match">
+                                96%
+                                <small>Match</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="buyer">
+
+                            <div class="buyer-logo blue-logo">
+                                B
+                            </div>
+
+                            <div class="buyer-info">
+
+                                <strong>
+                                    Bengal Fresh Mart
+                                </strong>
+
+                                <span>
+                                    Howrah • 32 km away
+                                </span>
+
+                            </div>
+
+                            <div class="match">
+                                91%
+                                <small>Match</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="buyer">
+
+                            <div class="buyer-logo orange-logo">
+                                V
+                            </div>
+
+                            <div class="buyer-info">
+
+                                <strong>
+                                    VeggieKart Pvt. Ltd.
+                                </strong>
+
+                                <span>
+                                    Kolkata • 41 km away
+                                </span>
+
+                            </div>
+
+                            <div class="match">
+                                88%
+                                <small>Match</small>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= LOGISTICS ================= -->
+
+            <div class="card logistics-card" id="logistics">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Active Deliveries
+                        </h2>
+
+                        <p>
+                            Track your current orders
+                        </p>
+
+                    </div>
+
+                    <a href="#">
+                        Manage Logistics
+                    </a>
+
+                </div>
+
+
+                <div class="delivery">
+
+                    <div class="delivery-icon">
+                        <i class="fa-solid fa-truck"></i>
+                    </div>
+
+                    <div class="delivery-info">
+
+                        <strong>
+                            Tomato → AgriFresh Foods
+                        </strong>
+
+                        <span>
+                            40 Quintals • Kolkata
+                        </span>
+
+                    </div>
+
+                    <div class="progress-area">
+
+                        <div class="progress-text">
+
+                            <span>
+                                In Transit
+                            </span>
+
+                            <strong>
+                                72%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress">
+                            <div style="width:72%"></div>
+                        </div>
+
+                    </div>
+
+                    <span class="delivery-date">
+                        Arriving Today
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= ADD PRODUCE MODAL ================= -->
+
+    <div class="modal-overlay" id="produceModal">
+
+        <div class="modal">
+
+            <button
+                class="close-modal"
+                onclick="closeProduceModal()">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <div class="modal-heading">
+
+                <div class="modal-icon">
+                    <i class="fa-solid fa-seedling"></i>
+                </div>
+
+                <div>
+                    <h2>Add Your Produce</h2>
+                    <p>
+                        Add details to find the best buyers.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <form onsubmit="addProduce(event)">
+
+                <label>Crop Name</label>
+
+                <select required>
+
+                    <option value="">
+                        Select crop
+                    </option>
+
+                    <option>Tomato</option>
+                    <option>Potato</option>
+                    <option>Rice</option>
+                    <option>Onion</option>
+                    <option>Wheat</option>
+
+                </select>
+
+
+                <div class="two-inputs">
+
+                    <div>
+
+                        <label>Quantity</label>
+
+                        <input
+                            type="number"
+                            placeholder="e.g. 50"
+                            required>
+
+                    </div>
+
+
+                    <div>
+
+                        <label>Unit</label>
+
+                        <select>
+
+                            <option>Quintal</option>
+                            <option>Kg</option>
+                            <option>Ton</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <label>Expected Price / Quintal</label>
+
+                <input
+                    type="number"
+                    placeholder="₹ Enter expected price"
+                    required>
+
+
+                <label>Harvest / Ready Date</label>
+
+                <input
+                    type="date"
+                    required>
+
+
+                <button class="modal-submit">
+                    <i class="fa-solid fa-check"></i>
+                    Add Produce
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>

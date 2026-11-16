@@ -1,0 +1,1091 @@
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d4f8d7 0%,
+            #FFFDF5 45%,
+            #E1F5FE 100%
+        );
+
+    color: #26352A;
+
+    overflow-x: hidden;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+/* ================================
+   BACKGROUND DECORATION
+================================ */
+
+.sky-glow {
+    position: fixed;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    background: #a1defa;
+
+    opacity: .18;
+
+    top: -200px;
+    right: -150px;
+
+    filter: blur(30px);
+}
+
+.leaf {
+    position: fixed;
+
+    font-size: 90px;
+
+    opacity: .08;
+
+    z-index: 0;
+}
+
+.leaf-one {
+    left: 20px;
+    bottom: 20px;
+
+    transform: rotate(-20deg);
+}
+
+.leaf-two {
+    right: 30px;
+    top: 100px;
+
+    transform: rotate(30deg);
+}
+
+
+/* ================================
+   MAIN CONTAINER
+================================ */
+
+.auth-container {
+
+    width: 1150px;
+    max-width: 94%;
+
+    min-height: 680px;
+
+    margin: 40px auto;
+
+    display: grid;
+
+    grid-template-columns: 1.05fr .95fr;
+
+    background: rgb(254, 254, 254);
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 70px rgba(42, 70, 45, .15);
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* ================================
+   LEFT SIDE
+================================ */
+
+.auth-left {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 38px 45px;
+
+    background:
+        linear-gradient(
+            150deg,
+            #E7F5E9 0%,
+            #F8F4E9 58%,
+            #DFF3FC 100%
+        );
+}
+
+
+/* Brand */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+.brand-icon {
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 12px;
+
+    font-size: 24px;
+
+    box-shadow:
+        0 8px 20px rgba(50,80,50,.08);
+}
+
+.brand h2 {
+
+    font-size: 20px;
+
+    color: #1B5E20;
+}
+
+.brand h2 span {
+    color: #795548;
+}
+
+.brand p {
+
+    font-size: 9px;
+
+    color: #647168;
+
+    margin-top: 1px;
+}
+
+
+/* Left content */
+
+.left-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    margin-top: 65px;
+
+    max-width: 490px;
+}
+
+.small-tag {
+
+    display: inline-block;
+
+    background: rgba(255,255,255,.75);
+
+    color: #2E7D32;
+
+    border: 1px solid #C8E6C9;
+
+    border-radius: 30px;
+
+    padding: 7px 13px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: .5px;
+}
+
+.left-content h1 {
+
+    font-size: 48px;
+
+    line-height: 1.05;
+
+    margin-top: 20px;
+
+    color: #193420;
+}
+
+.left-content h1 span {
+    color: #2E7D32;
+}
+
+.left-content > p {
+
+    margin-top: 18px;
+
+    color: #5F6C63;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* ================================
+   BENEFITS
+================================ */
+
+.benefits {
+
+    margin-top: 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+.benefit {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.benefit-icon {
+
+    width: 39px;
+    height: 39px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 19px;
+}
+
+.benefit-icon.green {
+    background: #E8F5E9;
+}
+
+.benefit-icon.blue {
+    background: #E1F5FE;
+}
+
+.benefit-icon.brown {
+    background: #EFEBE9;
+}
+
+.benefit h3 {
+
+    font-size: 12px;
+
+    color: #26352A;
+}
+
+.benefit p {
+
+    font-size: 10px;
+
+    color: #707A73;
+
+    margin-top: 2px;
+}
+
+
+/* ================================
+   FARM VISUAL
+================================ */
+
+.farm-decoration {
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 145px;
+
+    overflow: hidden;
+}
+
+.mountain {
+
+    position: absolute;
+
+    bottom: 35px;
+
+    left: 0;
+
+    width: 100%;
+    height: 90px;
+
+    background: #C8E6C9;
+
+    clip-path:
+        polygon(
+            0 100%,
+            20% 45%,
+            34% 75%,
+            52% 25%,
+            70% 70%,
+            83% 40%,
+            100% 75%,
+            100% 100%
+        );
+}
+
+.field-one {
+
+    position: absolute;
+
+    bottom: 0;
+
+    width: 100%;
+    height: 65px;
+
+    background: #8BC34A;
+
+    transform: skewY(-3deg);
+}
+
+.field-two {
+
+    position: absolute;
+
+    bottom: -15px;
+
+    width: 100%;
+    height: 55px;
+
+    background: #795548;
+
+    transform: skewY(3deg);
+}
+
+.cloud {
+
+    position: absolute;
+
+    font-size: 38px;
+
+    opacity: .65;
+}
+
+.cloud-one {
+    top: 3px;
+    left: 80px;
+}
+
+.cloud-two {
+    top: 25px;
+    right: 80px;
+}
+
+.farmer {
+
+    position: absolute;
+
+    bottom: 40px;
+
+    left: 45%;
+
+    font-size: 42px;
+
+    z-index: 4;
+}
+
+.tree {
+
+    position: absolute;
+
+    bottom: 35px;
+
+    font-size: 38px;
+
+    z-index: 5;
+}
+
+.tree-one {
+    left: 30px;
+}
+
+.tree-two {
+    right: 25px;
+}
+
+
+/* ================================
+   RIGHT SIDE
+================================ */
+
+.auth-right {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 35px;
+
+    background: #FFFFFF;
+}
+
+.auth-box {
+
+    width: 100%;
+
+    max-width: 390px;
+}
+
+
+/* ================================
+   TABS
+================================ */
+
+.auth-tabs {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: #F1F5F1;
+
+    padding: 4px;
+
+    border-radius: 10px;
+
+    margin-bottom: 28px;
+}
+
+.tab {
+
+    border: none;
+
+    background: transparent;
+
+    padding: 11px;
+
+    border-radius: 8px;
+
+    color: #68736B;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    font-size: 13px;
+}
+
+.tab.active {
+
+    background: white;
+
+    color: #2E7D32;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.07);
+}
+
+
+/* ================================
+   FORM
+================================ */
+
+.form-heading h2 {
+
+    font-size: 25px;
+
+    color: #193420;
+}
+
+.form-heading p {
+
+    font-size: 11px;
+
+    color: #737D76;
+
+    margin-top: 5px;
+
+    margin-bottom: 23px;
+}
+
+.form-section label {
+
+    display: block;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    color: #46534A;
+
+    margin-bottom: 7px;
+
+    margin-top: 14px;
+}
+
+.input-box {
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    border: 1px solid #DDE5DE;
+
+    border-radius: 9px;
+
+    padding: 0 12px;
+
+    transition: .2s;
+
+    background: #FCFDFC;
+}
+
+.input-box:focus-within {
+
+    border-color: #2E7D32;
+
+    box-shadow:
+        0 0 0 3px rgba(46,125,50,.08);
+}
+
+.input-box span {
+
+    font-size: 14px;
+
+    opacity: .75;
+}
+
+.input-box input {
+
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-size: 12px;
+
+    color: #26352A;
+}
+
+.eye {
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 13px;
+}
+
+
+/* ================================
+   FORM OPTIONS
+================================ */
+
+.form-options {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin: 14px 0 20px;
+}
+
+.form-options label {
+
+    margin: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    font-size: 10px;
+}
+
+.form-options a {
+
+    font-size: 10px;
+
+    color: #2E7D32;
+
+    font-weight: 600;
+}
+
+
+/* ================================
+   BUTTON
+================================ */
+
+.submit-btn {
+
+    width: 100%;
+
+    height: 46px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2E7D32,
+            #1B5E20
+        );
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.submit-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(46,125,50,.22);
+}
+
+
+/* ================================
+   DIVIDER
+================================ */
+
+.divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 19px 0;
+
+    color: #A1AAA3;
+
+    font-size: 9px;
+}
+
+.divider::before,
+.divider::after {
+
+    content: "";
+
+    height: 1px;
+
+    background: #E3E8E4;
+
+    flex: 1;
+}
+
+
+/* ================================
+   DEMO BUTTON
+================================ */
+
+.demo-btn {
+
+    width: 100%;
+
+    height: 43px;
+
+    border-radius: 9px;
+
+    border: 1px solid #BCAAA4;
+
+    background: #FFFDFC;
+
+    color: #6D5147;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.demo-btn:hover {
+
+    background: #efeae7;
+}
+
+
+/* ================================
+   SWITCH TEXT
+================================ */
+
+.switch-text {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    font-size: 10px;
+
+    color: #737D76;
+}
+
+.switch-text button {
+
+    border: none;
+
+    background: transparent;
+
+    color: #2E7D32;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* ================================
+   REGISTER ROLE
+================================ */
+
+.role-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 8px;
+
+    margin-bottom: 2px;
+}
+
+.role-card {
+
+    margin: 0 !important;
+
+    border: 1px solid #DDE5DE;
+
+    border-radius: 9px;
+
+    padding: 9px;
+
+    display: flex !important;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 3px;
+
+    cursor: pointer;
+
+    background: #FCFDFC;
+}
+
+.role-card input {
+    display: none;
+}
+
+.role-card span {
+    font-size: 20px;
+}
+
+.role-card strong {
+
+    font-size: 9px;
+
+    color: #46534A;
+}
+
+.role-card:has(input:checked) {
+
+    border-color: #2E7D32;
+
+    background: #75f67f;
+}
+
+
+/* ================================
+   TERMS
+================================ */
+
+.terms {
+
+    display: flex !important;
+
+    align-items: center;
+
+    gap: 6px;
+
+    font-size: 9px !important;
+
+    font-weight: normal !important;
+}
+
+.terms input {
+    accent-color: #2E7D32;
+}
+
+.terms a {
+    color: #2E7D32;
+}
+
+
+/* ================================
+   HIDDEN
+================================ */
+
+.hidden {
+    display: none;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 850px) {
+
+    .auth-container {
+
+        grid-template-columns: 1fr;
+
+        margin: 20px auto;
+    }
+
+    .auth-left {
+
+        min-height: 480px;
+    }
+
+    .farm-decoration {
+
+        display: none;
+    }
+
+    .left-content {
+
+        margin-top: 45px;
+    }
+
+    .left-content h1 {
+
+        font-size: 42px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .auth-container {
+
+.auth-container {
+    width: 96%;
+    max-width: 1450px;
+    min-height: 92vh;
+    margin: 4vh auto;
+}
+
+.auth-left {
+    padding: 50px 65px;
+}
+
+.auth-right {
+    padding: 50px 65px;
+}
+
+.auth-box {
+    max-width: 500px;
+}
+    }
+
+    .auth-left {
+
+        padding: 28px 25px;
+
+        min-height: 430px;
+    }
+
+    .auth-right {
+
+        padding: 25px 18px;
+    }
+
+    .left-content h1 {
+
+        font-size: 36px;
+    }
+
+    .benefits {
+
+        gap: 10px;
+    }
+
+    .role-grid {
+
+        gap: 5px;
+    }
+}
+/* =========================================
+   FULL SCREEN ONLY
+   DESIGN KO TOUCH NAHI KARNA
+========================================= */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* Existing container ko full screen */
+.auth-container {
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    min-height: 100vh;
+
+    margin: 0;
+    border-radius: 0;
+
+    box-shadow: none;
+}
+
+/* =========================================
+   FINAL - ONLY MAKE EXISTING PAGE BIGGER
+   ========================================= */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.auth-container {
+    width: 96vw;
+    max-width: 1500px;
+    min-height: 94vh;
+
+    margin: 3vh auto;
+
+    transform: none;
+}
+
+/* Existing left side - only increase space */
+.auth-left {
+    padding: 55px 65px;
+}
+
+/* Existing right side - only increase space */
+.auth-right {
+    padding: 55px 70px;
+}
+
+/* Make the existing login/register content larger */
+.auth-box {
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-heading h2 {
+    font-size: 32px;
+}
+
+.form-heading p {
+    font-size: 14px;
+}
+
+.form-section label {
+    font-size: 13px;
+}
+
+.input-box {
+    height: 55px;
+}
+
+.input-box input {
+    font-size: 14px;
+}
+
+.submit-btn {
+    height: 55px;
+    font-size: 15px;
+}
+
+.tab {
+    padding: 15px;
+    font-size: 14px;
+}
+
+
+/* IMPORTANT */
+.hidden {
+    display: none !important;
+}
+
+
+/* Laptop screen */
+@media (min-width: 1000px) {
+
+    .auth-container {
+        width: 96vw;
+        height: 94vh;
+        min-height: 0;
+    }
+
+    .auth-left,
+    .auth-right {
+        height: 94vh;
+    }
+
+}

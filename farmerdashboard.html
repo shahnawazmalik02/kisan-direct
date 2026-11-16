@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KrishiDirect | Farmer Dashboard</title>
+
+    <link rel="stylesheet" href="dash.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">
+                🌱
+            </div>
+
+            <div>
+                <h2>KrishiDirect</h2>
+                <span>Smart Agriculture • Better Earnings</span>
+            </div>
+        </div>
+
+
+        <div class="menu-title">MAIN MENU</div>
+
+        <nav>
+
+            <a href="#" class="menu-item active">
+                <i data-lucide="layout-dashboard"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i data-lucide="wheat"></i>
+                <span>My Produce</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i data-lucide="users"></i>
+                <span>Find Buyers</span>
+                <span class="badge">12</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i data-lucide="trending-up"></i>
+                <span>Market Prices</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i data-lucide="truck"></i>
+                <span>Logistics</span>
+            </a>
+
+        </nav>
+
+
+        <div class="menu-title">ACCOUNT</div>
+
+        <nav>
+
+            <a href="#" class="menu-item">
+                <i data-lucide="wallet"></i>
+                <span>Transactions</span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i data-lucide="bell"></i>
+                <span>Notifications</span>
+                <span class="notification-dot"></span>
+            </a>
+
+            <a href="#" class="menu-item">
+                <i data-lucide="circle-help"></i>
+                <span>Help & Support</span>
+            </a>
+
+        </nav>
+
+
+        <!-- Farmer Profile -->
+
+        <div class="farmer-profile">
+
+            <div class="profile-image">
+                R
+            </div>
+
+            <div class="profile-info">
+                <strong>Ramesh Kumar</strong>
+                <span>Farmer • West Bengal</span>
+            </div>
+
+            <i data-lucide="more-vertical"></i>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="search-box">
+
+                <i data-lucide="search"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search produce, buyers, prices..."
+                >
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <button class="icon-button">
+                    <i data-lucide="bell"></i>
+                    <span class="red-dot"></span>
+                </button>
+
+                <div class="top-profile">
+
+                    <div class="small-avatar">
+                        R
+                    </div>
+
+                    <div>
+                        <strong>Ramesh Kumar</strong>
+                        <span>Farmer</span>
+                    </div>
+
+                    <i data-lucide="chevron-down"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ================= PAGE HEADER ================= -->
+
+        <section class="welcome-section">
+
+            <div>
+
+                <div class="date">
+                    <i data-lucide="calendar"></i>
+                    Friday, 28 August 2026
+                </div>
+
+                <h1>
+                    Good Morning, Ramesh! 👋
+                </h1>
+
+                <p>
+                    Here's what's happening with your farm today.
+                </p>
+
+            </div>
+
+
+            <button class="add-produce">
+
+                <i data-lucide="plus"></i>
+
+                Add Produce
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ================= STATS ================= -->
+
+        <section class="stats-grid">
+
+
+            <!-- Earnings -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon green">
+                        <i data-lucide="indian-rupee"></i>
+                    </div>
+
+                    <span class="growth">
+                        +12.5%
+                    </span>
+
+                </div>
+
+                <p>Estimated Crop Value</p>
+
+                <h2>₹1,84,500</h2>
+
+                <span class="muted">
+                    Based on current market prices
+                </span>
+
+            </div>
+
+
+            <!-- Buyers -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon blue">
+                        <i data-lucide="users"></i>
+                    </div>
+
+                    <span class="growth">
+                        +8
+                    </span>
+
+                </div>
+
+                <p>Potential Buyers</p>
+
+                <h2>24</h2>
+
+                <span class="muted">
+                    Interested in your produce
+                </span>
+
+            </div>
+
+
+            <!-- Market Price -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon orange">
+                        <i data-lucide="bar-chart-3"></i>
+                    </div>
+
+                    <span class="growth">
+                        +6.2%
+                    </span>
+
+                </div>
+
+                <p>Best Market Price</p>
+
+                <h2>₹2,840</h2>
+
+                <span class="muted">
+                    Per quintal • Today
+                </span>
+
+            </div>
+
+
+            <!-- Delivery -->
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+
+                    <div class="stat-icon purple">
+                        <i data-lucide="truck"></i>
+                    </div>
+
+                    <span class="status-live">
+                        2 Active
+                    </span>
+
+                </div>
+
+                <p>Active Deliveries</p>
+
+                <h2>02</h2>
+
+                <span class="muted">
+                    On the way to buyers
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= MAIN GRID ================= -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- MARKET PRICE -->
+
+            <div class="card market-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>Market Price Intelligence</h3>
+
+                        <p>
+                            Tomato prices • Last 7 days
+                        </p>
+
+                    </div>
+
+                    <button class="filter-btn">
+                        7 Days
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="price-highlight">
+
+                    <div>
+
+                        <span>Current Best Price</span>
+
+                        <strong>₹2,840</strong>
+
+                    </div>
+
+                    <div class="price-change">
+
+                        <i data-lucide="trending-up"></i>
+
+                        +8.4%
+
+                    </div>
+
+                </div>
+
+
+                <!-- Fake Graph -->
+
+                <div class="graph">
+
+                    <div class="graph-lines"></div>
+
+                    <svg viewBox="0 0 700 200">
+
+                        <polyline
+                            points="0,150 70,135 140,145 210,120 280,128 350,105 420,110 490,85 560,95 630,65 700,45"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="4"
+                        />
+
+                    </svg>
+
+                    <div class="graph-labels">
+                        <span>22 Aug</span>
+                        <span>23</span>
+                        <span>24</span>
+                        <span>25</span>
+                        <span>26</span>
+                        <span>27</span>
+                        <span>28 Aug</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- AI ADVISOR -->
+
+            <div class="card advisor-card">
+
+                <div class="advisor-heading">
+
+                    <div class="ai-icon">
+                        🤖
+                    </div>
+
+                    <div>
+
+                        <h3>AI Selling Advisor</h3>
+
+                        <span>Personalized recommendation</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="recommendation">
+
+                    <span class="recommend-label">
+                        RECOMMENDED ACTION
+                    </span>
+
+                    <h3>
+                        Sell within the next 2–3 days
+                    </h3>
+
+                    <p>
+                        Market demand is expected to increase.
+                        Selling now could give you a better return
+                        than waiting for the next price cycle.
+                    </p>
+
+                </div>
+
+
+                <div class="advisor-stats">
+
+                    <div>
+
+                        <span>Expected Price</span>
+
+                        <strong>₹3,050/Q</strong>
+
+                    </div>
+
+                    <div>
+
+                        <span>Potential Gain</span>
+
+                        <strong class="green-text">
+                            +₹210/Q
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <button class="advisor-btn">
+                    View Recommendation
+                    <i data-lucide="arrow-right"></i>
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= LOWER GRID ================= -->
+
+        <section class="lower-grid">
+
+
+            <!-- MY PRODUCE -->
+
+            <div class="card produce-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>My Produce</h3>
+
+                        <p>
+                            Your listed crops
+                        </p>
+
+                    </div>
+
+                    <a href="#">
+                        View All →
+                    </a>
+
+                </div>
+
+
+                <div class="produce-list">
+
+
+                    <div class="produce-item">
+
+                        <div class="crop-icon tomato">
+                            🍅
+                        </div>
+
+                        <div class="crop-info">
+
+                            <strong>Fresh Tomatoes</strong>
+
+                            <span>
+                                120 Quintal • Ready to sell
+                            </span>
+
+                        </div>
+
+                        <div class="crop-price">
+
+                            <strong>₹2,840</strong>
+
+                            <span>per quintal</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="produce-item">
+
+                        <div class="crop-icon potato">
+                            🥔
+                        </div>
+
+                        <div class="crop-info">
+
+                            <strong>Potatoes</strong>
+
+                            <span>
+                                80 Quintal • Available
+                            </span>
+
+                        </div>
+
+                        <div class="crop-price">
+
+                            <strong>₹1,920</strong>
+
+                            <span>per quintal</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="produce-item">
+
+                        <div class="crop-icon rice">
+                            🌾
+                        </div>
+
+                        <div class="crop-info">
+
+                            <strong>Premium Rice</strong>
+
+                            <span>
+                                60 Quintal • Harvested
+                            </span>
+
+                        </div>
+
+                        <div class="crop-price">
+
+                            <strong>₹3,420</strong>
+
+                            <span>per quintal</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BUYER MATCHES -->
+
+            <div class="card buyer-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>Top Buyer Matches</h3>
+
+                        <p>
+                            AI matched buyers
+                        </p>
+
+                    </div>
+
+                    <a href="#">
+                        View All →
+                    </a>
+
+                </div>
+
+
+                <div class="buyer-list">
+
+
+                    <div class="buyer-item">
+
+                        <div class="buyer-avatar">
+                            A
+                        </div>
+
+                        <div class="buyer-info">
+
+                            <strong>AgroFresh Foods</strong>
+
+                            <span>
+                                📍 Kolkata • 96% Match
+                            </span>
+
+                        </div>
+
+                        <div class="buyer-offer">
+
+                            <strong>₹3,050/Q</strong>
+
+                            <span>Best Offer</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="buyer-item">
+
+                        <div class="buyer-avatar second">
+                            B
+                        </div>
+
+                        <div class="buyer-info">
+
+                            <strong>Bengal Fresh Mart</strong>
+
+                            <span>
+                                📍 Howrah • 91% Match
+                            </span>
+
+                        </div>
+
+                        <div class="buyer-offer">
+
+                            <strong>₹2,980/Q</strong>
+
+                            <span>Direct Buyer</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="buyer-item">
+
+                        <div class="buyer-avatar third">
+                            R
+                        </div>
+
+                        <div class="buyer-info">
+
+                            <strong>RetailHub Pvt Ltd</strong>
+
+                            <span>
+                                📍 Kolkata • 88% Match
+                            </span>
+
+                        </div>
+
+                        <div class="buyer-offer">
+
+                            <strong>₹2,920/Q</strong>
+
+                            <span>Verified Buyer</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= DIRECT SALE BANNER ================= -->
+
+        <section class="direct-sale-banner">
+
+            <div class="banner-icon">
+                🤝
+            </div>
+
+            <div class="banner-content">
+
+                <h2>
+                    Sell Directly. Earn More.
+                </h2>
+
+                <p>
+                    Connect directly with verified buyers and reduce
+                    unnecessary intermediaries.
+                </p>
+
+            </div>
+
+            <div class="banner-highlight">
+
+                <span>Potential Savings</span>
+
+                <strong>₹18,500</strong>
+
+            </div>
+
+            <button>
+                Find Direct Buyers
+                <i data-lucide="arrow-right"></i>
+            </button>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script>
+    lucide.createIcons();
+</script>
+
+</body>
+</html>
